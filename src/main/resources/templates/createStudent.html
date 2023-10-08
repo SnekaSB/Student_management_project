@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>CreateStudent</title>
+	</head>
+	<body>
+		<form th:action="@{/student}" th:object ="${studentObj}" method = "POST">
+			<label>Name</label>
+			<input
+				type="text"
+				name ="name"
+				th:field="*{name}"
+			/>
+			
+			<label>Email</label>
+			<input
+				type="text"
+				name ="email"
+				th:field="*{email}"
+			/>
+			
+			<label>Department</label>
+			<input
+				type="text"
+				name ="department"
+				th:field="*{department}"
+			/>
+			
+			<button type = "submit">Submit</button>
+		
+		</form>
+	</body>
+</html>
